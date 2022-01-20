@@ -52,6 +52,6 @@ export class Courant{
     retrait(montant){
         if(montant <= 0) throw new RangeError('Le montant doit être positif.');
         if(montant > this.Solde + this.LigneDeCredit) throw new RangeError('Le montant doit être inférieur au solde restant.');
-        this.#solde -= - montant;
+        this.#solde -= montant;
     }
 }
