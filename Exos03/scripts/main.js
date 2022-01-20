@@ -17,13 +17,13 @@ let compte3 = new Courant('BE03',1000,0,toto);
 let compte4 = new Courant('BE04',100,0,toto);
 console.log(compte2);
 
-let bank = new Banque("DonnerSansCompter");
-bank.ajouterCompte(compte);
+let bank = new Banque("DonnerSansCompter",compte,compte4);
+//bank.ajouterCompte(compte);
 //Ajout de 2 fois le même compte contré
 //bank.ajouterCompte(compte);
 bank.ajouterCompte(compte2);
 bank.ajouterCompte(compte3);
-bank.ajouterCompte(compte4);
+//bank.ajouterCompte(compte4);
 
 console.log(bank.compte("BE01"));
 compte.retrait(10000);

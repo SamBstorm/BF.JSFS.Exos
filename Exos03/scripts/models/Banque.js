@@ -6,9 +6,10 @@ export class Banque{
     #comptes
     #nom
     
-    constructor(nom){
+    constructor(nom, ...comptes){
         this.#nom = nom;
         this.#comptes = new Map();
+        comptes.forEach( c => this.ajouterCompte(c));
     }
 
     get Nom(){
